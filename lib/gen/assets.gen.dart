@@ -101,14 +101,23 @@ class $AssetsSvgGen {
   /// File path: assets/svg/Vector.svg
   SvgGenImage get vector => const SvgGenImage('assets/svg/Vector.svg');
 
+  /// File path: assets/svg/arrow-left.svg
+  SvgGenImage get arrowLeft => const SvgGenImage('assets/svg/arrow-left.svg');
+
+  /// File path: assets/svg/arrow-right.svg
+  SvgGenImage get arrowRight => const SvgGenImage('assets/svg/arrow-right.svg');
+
   /// File path: assets/svg/electron.svg
   SvgGenImage get electron => const SvgGenImage('assets/svg/electron.svg');
+
+  /// File path: assets/svg/image.png
+  AssetGenImage get image => const AssetGenImage('assets/svg/image.png');
 
   /// File path: assets/svg/mass.svg
   SvgGenImage get mass => const SvgGenImage('assets/svg/mass.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [
+  List<dynamic> get values => [
         actionsPlus,
         arrowChevronBack1,
         arrowChevronBack,
@@ -120,7 +129,10 @@ class $AssetsSvgGen {
         search,
         toxic,
         vector,
+        arrowLeft,
+        arrowRight,
         electron,
+        image,
         mass
       ];
 }

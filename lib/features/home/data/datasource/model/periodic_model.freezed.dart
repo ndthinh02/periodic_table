@@ -20,6 +20,10 @@ PeriodicModel _$PeriodicModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PeriodicModel {
+  int? get xpos => throw _privateConstructorUsedError;
+  int? get ypos => throw _privateConstructorUsedError;
+  int? get wxpos => throw _privateConstructorUsedError;
+  int? get wypos => throw _privateConstructorUsedError;
   @JsonKey(name: "AtomicNumber")
   int? get atomicNumber => throw _privateConstructorUsedError;
   @JsonKey(name: "Name")
@@ -58,7 +62,7 @@ mixin _$PeriodicModel {
   dynamic? get oxidationStates => throw _privateConstructorUsedError;
   @JsonKey(name: "PaulingScale")
   dynamic? get paulingScale => throw _privateConstructorUsedError;
-  @JsonKey(name: "AtomicradiusVanderWaals")
+  @JsonKey(name: "Atomicradius(vanderWaals)")
   dynamic? get atomicradiusVanderWaals => throw _privateConstructorUsedError;
   @JsonKey(name: "IonizationEnergy")
   dynamic? get ionizationEnergy => throw _privateConstructorUsedError;
@@ -90,7 +94,11 @@ abstract class $PeriodicModelCopyWith<$Res> {
       _$PeriodicModelCopyWithImpl<$Res, PeriodicModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: "AtomicNumber") int? atomicNumber,
+      {int? xpos,
+      int? ypos,
+      int? wxpos,
+      int? wypos,
+      @JsonKey(name: "AtomicNumber") int? atomicNumber,
       @JsonKey(name: "Name") String? name,
       @JsonKey(name: "Symbol") String? symbol,
       @JsonKey(name: "Category") String? category,
@@ -109,7 +117,7 @@ abstract class $PeriodicModelCopyWith<$Res> {
       @JsonKey(name: "Group") dynamic? group,
       @JsonKey(name: "OxidationStates") dynamic? oxidationStates,
       @JsonKey(name: "PaulingScale") dynamic? paulingScale,
-      @JsonKey(name: "AtomicradiusVanderWaals")
+      @JsonKey(name: "Atomicradius(vanderWaals)")
       dynamic? atomicradiusVanderWaals,
       @JsonKey(name: "IonizationEnergy") dynamic? ionizationEnergy,
       @JsonKey(name: "ElectronAffinity") dynamic? electronAffinity,
@@ -134,6 +142,10 @@ class _$PeriodicModelCopyWithImpl<$Res, $Val extends PeriodicModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? xpos = freezed,
+    Object? ypos = freezed,
+    Object? wxpos = freezed,
+    Object? wypos = freezed,
     Object? atomicNumber = freezed,
     Object? name = freezed,
     Object? symbol = freezed,
@@ -164,6 +176,22 @@ class _$PeriodicModelCopyWithImpl<$Res, $Val extends PeriodicModel>
     Object? fBoilingpoint = freezed,
   }) {
     return _then(_value.copyWith(
+      xpos: freezed == xpos
+          ? _value.xpos
+          : xpos // ignore: cast_nullable_to_non_nullable
+              as int?,
+      ypos: freezed == ypos
+          ? _value.ypos
+          : ypos // ignore: cast_nullable_to_non_nullable
+              as int?,
+      wxpos: freezed == wxpos
+          ? _value.wxpos
+          : wxpos // ignore: cast_nullable_to_non_nullable
+              as int?,
+      wypos: freezed == wypos
+          ? _value.wypos
+          : wypos // ignore: cast_nullable_to_non_nullable
+              as int?,
       atomicNumber: freezed == atomicNumber
           ? _value.atomicNumber
           : atomicNumber // ignore: cast_nullable_to_non_nullable
@@ -289,7 +317,11 @@ abstract class _$$PeriodicModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "AtomicNumber") int? atomicNumber,
+      {int? xpos,
+      int? ypos,
+      int? wxpos,
+      int? wypos,
+      @JsonKey(name: "AtomicNumber") int? atomicNumber,
       @JsonKey(name: "Name") String? name,
       @JsonKey(name: "Symbol") String? symbol,
       @JsonKey(name: "Category") String? category,
@@ -308,7 +340,7 @@ abstract class _$$PeriodicModelImplCopyWith<$Res>
       @JsonKey(name: "Group") dynamic? group,
       @JsonKey(name: "OxidationStates") dynamic? oxidationStates,
       @JsonKey(name: "PaulingScale") dynamic? paulingScale,
-      @JsonKey(name: "AtomicradiusVanderWaals")
+      @JsonKey(name: "Atomicradius(vanderWaals)")
       dynamic? atomicradiusVanderWaals,
       @JsonKey(name: "IonizationEnergy") dynamic? ionizationEnergy,
       @JsonKey(name: "ElectronAffinity") dynamic? electronAffinity,
@@ -331,6 +363,10 @@ class __$$PeriodicModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? xpos = freezed,
+    Object? ypos = freezed,
+    Object? wxpos = freezed,
+    Object? wypos = freezed,
     Object? atomicNumber = freezed,
     Object? name = freezed,
     Object? symbol = freezed,
@@ -361,6 +397,22 @@ class __$$PeriodicModelImplCopyWithImpl<$Res>
     Object? fBoilingpoint = freezed,
   }) {
     return _then(_$PeriodicModelImpl(
+      xpos: freezed == xpos
+          ? _value.xpos
+          : xpos // ignore: cast_nullable_to_non_nullable
+              as int?,
+      ypos: freezed == ypos
+          ? _value.ypos
+          : ypos // ignore: cast_nullable_to_non_nullable
+              as int?,
+      wxpos: freezed == wxpos
+          ? _value.wxpos
+          : wxpos // ignore: cast_nullable_to_non_nullable
+              as int?,
+      wypos: freezed == wypos
+          ? _value.wypos
+          : wypos // ignore: cast_nullable_to_non_nullable
+              as int?,
       atomicNumber: freezed == atomicNumber
           ? _value.atomicNumber
           : atomicNumber // ignore: cast_nullable_to_non_nullable
@@ -481,7 +533,11 @@ class __$$PeriodicModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PeriodicModelImpl implements _PeriodicModel {
   const _$PeriodicModelImpl(
-      {@JsonKey(name: "AtomicNumber") this.atomicNumber,
+      {this.xpos,
+      this.ypos,
+      this.wxpos,
+      this.wypos,
+      @JsonKey(name: "AtomicNumber") this.atomicNumber,
       @JsonKey(name: "Name") this.name,
       @JsonKey(name: "Symbol") this.symbol,
       @JsonKey(name: "Category") this.category,
@@ -500,7 +556,7 @@ class _$PeriodicModelImpl implements _PeriodicModel {
       @JsonKey(name: "Group") this.group,
       @JsonKey(name: "OxidationStates") this.oxidationStates,
       @JsonKey(name: "PaulingScale") this.paulingScale,
-      @JsonKey(name: "AtomicradiusVanderWaals") this.atomicradiusVanderWaals,
+      @JsonKey(name: "Atomicradius(vanderWaals)") this.atomicradiusVanderWaals,
       @JsonKey(name: "IonizationEnergy") this.ionizationEnergy,
       @JsonKey(name: "ElectronAffinity") this.electronAffinity,
       @JsonKey(name: "CMeltingpoint") this.cMeltingpoint,
@@ -513,6 +569,14 @@ class _$PeriodicModelImpl implements _PeriodicModel {
   factory _$PeriodicModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$PeriodicModelImplFromJson(json);
 
+  @override
+  final int? xpos;
+  @override
+  final int? ypos;
+  @override
+  final int? wxpos;
+  @override
+  final int? wypos;
   @override
   @JsonKey(name: "AtomicNumber")
   final int? atomicNumber;
@@ -571,7 +635,7 @@ class _$PeriodicModelImpl implements _PeriodicModel {
   @JsonKey(name: "PaulingScale")
   final dynamic? paulingScale;
   @override
-  @JsonKey(name: "AtomicradiusVanderWaals")
+  @JsonKey(name: "Atomicradius(vanderWaals)")
   final dynamic? atomicradiusVanderWaals;
   @override
   @JsonKey(name: "IonizationEnergy")
@@ -600,7 +664,7 @@ class _$PeriodicModelImpl implements _PeriodicModel {
 
   @override
   String toString() {
-    return 'PeriodicModel(atomicNumber: $atomicNumber, name: $name, symbol: $symbol, category: $category, block: $block, metalic: $metalic, electron: $electron, proton: $proton, notron: $notron, disscoveryBy: $disscoveryBy, discoveryYear: $discoveryYear, cASNumber: $cASNumber, atomicWeight: $atomicWeight, standardState: $standardState, electronicconfiguration: $electronicconfiguration, period: $period, group: $group, oxidationStates: $oxidationStates, paulingScale: $paulingScale, atomicradiusVanderWaals: $atomicradiusVanderWaals, ionizationEnergy: $ionizationEnergy, electronAffinity: $electronAffinity, cMeltingpoint: $cMeltingpoint, kMeltingpoint: $kMeltingpoint, fMeltingpoint: $fMeltingpoint, cBoilingpoint: $cBoilingpoint, kBoilingpoint: $kBoilingpoint, fBoilingpoint: $fBoilingpoint)';
+    return 'PeriodicModel(xpos: $xpos, ypos: $ypos, wxpos: $wxpos, wypos: $wypos, atomicNumber: $atomicNumber, name: $name, symbol: $symbol, category: $category, block: $block, metalic: $metalic, electron: $electron, proton: $proton, notron: $notron, disscoveryBy: $disscoveryBy, discoveryYear: $discoveryYear, cASNumber: $cASNumber, atomicWeight: $atomicWeight, standardState: $standardState, electronicconfiguration: $electronicconfiguration, period: $period, group: $group, oxidationStates: $oxidationStates, paulingScale: $paulingScale, atomicradiusVanderWaals: $atomicradiusVanderWaals, ionizationEnergy: $ionizationEnergy, electronAffinity: $electronAffinity, cMeltingpoint: $cMeltingpoint, kMeltingpoint: $kMeltingpoint, fMeltingpoint: $fMeltingpoint, cBoilingpoint: $cBoilingpoint, kBoilingpoint: $kBoilingpoint, fBoilingpoint: $fBoilingpoint)';
   }
 
   @override
@@ -608,6 +672,10 @@ class _$PeriodicModelImpl implements _PeriodicModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PeriodicModelImpl &&
+            (identical(other.xpos, xpos) || other.xpos == xpos) &&
+            (identical(other.ypos, ypos) || other.ypos == ypos) &&
+            (identical(other.wxpos, wxpos) || other.wxpos == wxpos) &&
+            (identical(other.wypos, wypos) || other.wypos == wypos) &&
             (identical(other.atomicNumber, atomicNumber) ||
                 other.atomicNumber == atomicNumber) &&
             (identical(other.name, name) || other.name == name) &&
@@ -661,6 +729,10 @@ class _$PeriodicModelImpl implements _PeriodicModel {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
+        xpos,
+        ypos,
+        wxpos,
+        wypos,
         atomicNumber,
         name,
         symbol,
@@ -707,7 +779,11 @@ class _$PeriodicModelImpl implements _PeriodicModel {
 
 abstract class _PeriodicModel implements PeriodicModel {
   const factory _PeriodicModel(
-          {@JsonKey(name: "AtomicNumber") final int? atomicNumber,
+          {final int? xpos,
+          final int? ypos,
+          final int? wxpos,
+          final int? wypos,
+          @JsonKey(name: "AtomicNumber") final int? atomicNumber,
           @JsonKey(name: "Name") final String? name,
           @JsonKey(name: "Symbol") final String? symbol,
           @JsonKey(name: "Category") final String? category,
@@ -727,7 +803,7 @@ abstract class _PeriodicModel implements PeriodicModel {
           @JsonKey(name: "Group") final dynamic? group,
           @JsonKey(name: "OxidationStates") final dynamic? oxidationStates,
           @JsonKey(name: "PaulingScale") final dynamic? paulingScale,
-          @JsonKey(name: "AtomicradiusVanderWaals")
+          @JsonKey(name: "Atomicradius(vanderWaals)")
           final dynamic? atomicradiusVanderWaals,
           @JsonKey(name: "IonizationEnergy") final dynamic? ionizationEnergy,
           @JsonKey(name: "ElectronAffinity") final dynamic? electronAffinity,
@@ -742,6 +818,14 @@ abstract class _PeriodicModel implements PeriodicModel {
   factory _PeriodicModel.fromJson(Map<String, dynamic> json) =
       _$PeriodicModelImpl.fromJson;
 
+  @override
+  int? get xpos;
+  @override
+  int? get ypos;
+  @override
+  int? get wxpos;
+  @override
+  int? get wypos;
   @override
   @JsonKey(name: "AtomicNumber")
   int? get atomicNumber;
@@ -800,7 +884,7 @@ abstract class _PeriodicModel implements PeriodicModel {
   @JsonKey(name: "PaulingScale")
   dynamic? get paulingScale;
   @override
-  @JsonKey(name: "AtomicradiusVanderWaals")
+  @JsonKey(name: "Atomicradius(vanderWaals)")
   dynamic? get atomicradiusVanderWaals;
   @override
   @JsonKey(name: "IonizationEnergy")

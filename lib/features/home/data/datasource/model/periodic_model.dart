@@ -7,6 +7,10 @@ part 'periodic_model.g.dart';
 @freezed
 class PeriodicModel with _$PeriodicModel {
   const factory PeriodicModel({
+    int? xpos,
+    int? ypos,
+    int? wxpos,
+    int? wypos,
     @JsonKey(name: "AtomicNumber") int? atomicNumber,
     @JsonKey(name: "Name") String? name,
     @JsonKey(name: "Symbol") String? symbol,
@@ -26,7 +30,7 @@ class PeriodicModel with _$PeriodicModel {
     @JsonKey(name: "Group") dynamic? group,
     @JsonKey(name: "OxidationStates") dynamic? oxidationStates,
     @JsonKey(name: "PaulingScale") dynamic? paulingScale,
-    @JsonKey(name: "AtomicradiusVanderWaals") dynamic? atomicradiusVanderWaals,
+    @JsonKey(name: "Atomicradius(vanderWaals)") dynamic? atomicradiusVanderWaals,
     @JsonKey(name: "IonizationEnergy") dynamic? ionizationEnergy,
     @JsonKey(name: "ElectronAffinity") dynamic? electronAffinity,
     @JsonKey(name: "CMeltingpoint") dynamic? cMeltingpoint,

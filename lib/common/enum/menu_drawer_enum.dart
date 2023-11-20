@@ -51,7 +51,7 @@ extension SettingExt on MenuDrawerEnum {
       case MenuDrawerEnum.atomicWeight:
         return 'Atomic Weight';
       case MenuDrawerEnum.electionConfiguration:
-        return 'Election \n Configuration';
+        return 'Election \nConfiguration';
       case MenuDrawerEnum.discoveryYear:
         return 'Discovery Year';
       case MenuDrawerEnum.casNumber:

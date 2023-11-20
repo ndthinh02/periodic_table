@@ -22,24 +22,42 @@ class HomeBloc extends BaseBloc<HomeEvent, HomeState> with BaseCommonMethodMixin
     on<HomeEvent>((HomeEvent event, Emitter<HomeState> emit) async {
       await event.when(
         init: () => _onInit(emit),
+        search: (String? value) {
+          _onSearch(value, emit);
+        },
       );
     });
   }
 
   final HomeRepo _giftRepo;
+  List<PeriodicModel> _list = [];
 
   _onInit(Emitter emit) async {
     emit(state.copyWith(
       status: BaseStateStatus.loading,
     ));
     final res = await _giftRepo.getListPeriodic();
-    res.fold(
-      (l) => null,
-      (r) => emit(
+    res.fold((l) => null, (r) {
+      _list = r;
+      emit(
         state.copyWith(
-          listPeriodic: r,
+          listPeriodic: _list,
           status: BaseStateStatus.success,
         ),
+      );
+    });
+  }
+
+  _onSearch(String? value, Emitter emit) {
+    List<PeriodicModel> listSearch = [];
+    if (value?.isEmpty == true) {
+      listSearch = _list;
+    } else {
+      listSearch = _list.where((element) => (element.name ?? '').toLowerCase().contains(value ?? ''.toLowerCase())).toList();
+    }
+    emit(
+      state.copyWith(
+        listSearchPeriodic: listSearch,
       ),
     );
   }

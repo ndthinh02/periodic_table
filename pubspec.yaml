@@ -62,6 +62,7 @@ dependencies:
   json_annotation: ^4.5.0
 
 
+
   #cache network
   dio_http_cache_lts: ^0.4.1
 
@@ -86,7 +87,8 @@ dependencies:
   dio_cache_interceptor: ^3.4.0
   side_navigation: ^1.0.4
   adaptive_scrollbar: ^2.1.2
-
+  page_transition: ^2.1.0
+  zoom_widget: ^2.0.1
 
 dev_dependencies:
   flutter_test:

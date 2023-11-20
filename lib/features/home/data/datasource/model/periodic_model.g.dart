@@ -8,6 +8,10 @@ part of 'periodic_model.dart';
 
 _$PeriodicModelImpl _$$PeriodicModelImplFromJson(Map<String, dynamic> json) =>
     _$PeriodicModelImpl(
+      xpos: json['xpos'] as int?,
+      ypos: json['ypos'] as int?,
+      wxpos: json['wxpos'] as int?,
+      wypos: json['wypos'] as int?,
       atomicNumber: json['AtomicNumber'] as int?,
       name: json['Name'] as String?,
       symbol: json['Symbol'] as String?,
@@ -27,7 +31,7 @@ _$PeriodicModelImpl _$$PeriodicModelImplFromJson(Map<String, dynamic> json) =>
       group: json['Group'],
       oxidationStates: json['OxidationStates'],
       paulingScale: json['PaulingScale'],
-      atomicradiusVanderWaals: json['AtomicradiusVanderWaals'],
+      atomicradiusVanderWaals: json['Atomicradius(vanderWaals)'],
       ionizationEnergy: json['IonizationEnergy'],
       electronAffinity: json['ElectronAffinity'],
       cMeltingpoint: json['CMeltingpoint'],
@@ -40,6 +44,10 @@ _$PeriodicModelImpl _$$PeriodicModelImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$PeriodicModelImplToJson(_$PeriodicModelImpl instance) =>
     <String, dynamic>{
+      'xpos': instance.xpos,
+      'ypos': instance.ypos,
+      'wxpos': instance.wxpos,
+      'wypos': instance.wypos,
       'AtomicNumber': instance.atomicNumber,
       'Name': instance.name,
       'Symbol': instance.symbol,
@@ -59,7 +67,7 @@ Map<String, dynamic> _$$PeriodicModelImplToJson(_$PeriodicModelImpl instance) =>
       'Group': instance.group,
       'OxidationStates': instance.oxidationStates,
       'PaulingScale': instance.paulingScale,
-      'AtomicradiusVanderWaals': instance.atomicradiusVanderWaals,
+      'Atomicradius(vanderWaals)': instance.atomicradiusVanderWaals,
       'IonizationEnergy': instance.ionizationEnergy,
       'ElectronAffinity': instance.electronAffinity,
       'CMeltingpoint': instance.cMeltingpoint,
