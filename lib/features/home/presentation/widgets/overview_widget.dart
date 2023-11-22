@@ -37,7 +37,7 @@ class OverviewWidget extends StatelessWidget {
           height: 24.h,
         ),
         Text(
-          "Atomic \nProperties",
+          "Atomic Properties",
           style: AppStyles.subTitle1.copyWith(
             fontSize: 20.sp,
             fontWeight: FontWeight.w700,
@@ -78,7 +78,7 @@ class OverviewWidget extends StatelessWidget {
           subName: periodicModel.paulingScale.toString(),
         ),
         _reusableRow(
-          name: "Atomic Radius \n (van der Waals)",
+          name: "Atomic Radius \n(van der Waals)",
           subName: '${periodicModel.atomicradiusVanderWaals} pm',
         ),
         _reusableRow(
@@ -132,7 +132,7 @@ class OverviewWidget extends StatelessWidget {
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w600,
                   height: 20 / 20,
-                  color: AppColors.color344054,
+                  color: AppColors.color667085,
                 ),
               ),
             ),

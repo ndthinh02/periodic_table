@@ -69,7 +69,7 @@ class ElementTile extends StatelessWidget {
         width: cellSize,
         height: cellSize,
         margin: cellEdgeInsets,
-        padding: EdgeInsets.only(top: 6.h, left: 4.w),
+        padding: EdgeInsets.only(top: 4.h, left: 4.w),
         decoration: containerDecoration,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

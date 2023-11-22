@@ -179,6 +179,8 @@ class _HomePageState extends BaseShareState<HomePage, HomeEvent, HomeState, Home
           maxZoomHeight: 1000,
           initScale: 1,
           maxScale: 2,
+          // initTotalZoomOut: true,
+          onPanUpPosition: (p0) {},
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -283,15 +285,15 @@ class _HomePageState extends BaseShareState<HomePage, HomeEvent, HomeState, Home
               height: 80.h,
               margin: EdgeInsets.only(left: 1.w),
               decoration: BoxDecoration(
-                color: AppColors.colorECEEF9,
+                // color: AppColors.colorECEEF9,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(index == 0 ? 8.r : 0),
                   topRight: Radius.circular(index == 0 ? 8.r : 0),
                 ),
-                border: Border.all(
-                  width: 0.5,
-                  color: AppColors.colorD0D5DD,
-                ),
+                // border: Border.all(
+                //   width: 0.5,
+                //   color: AppColors.colorD0D5DD,
+                // ),
               ),
               child: Text(
                 '${index + 1}',
@@ -383,13 +385,14 @@ class _HomePageState extends BaseShareState<HomePage, HomeEvent, HomeState, Home
         height: 42.h,
         padding: EdgeInsets.only(
           left: 24.w,
-          top: 4.h,
+          top: 0.h,
         ),
         decoration: BoxDecoration(
           color: AppColors.colorECEEF9,
           borderRadius: BorderRadius.circular(8.r),
         ),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Assets.svg.search.svg(
               color: AppColors.color98A2B3,

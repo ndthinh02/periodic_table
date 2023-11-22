@@ -114,7 +114,8 @@ class ElementBottomWidget extends StatelessWidget {
           style: AppStyles.button1.copyWith(
             fontSize: 14.sp,
             height: 14 / 14,
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w600,
+            color: AppColors.color667085,
           ),
         ),
         SizedBox(
