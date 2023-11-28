@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_core/features/home/data/datasource/model/periodic_model.dart';
 import 'package:flutter_core/features/home/presentation/bloc/home_bloc.dart';
 import 'package:flutter_core/features/home/presentation/pages/detail_screen.dart';
 import 'package:flutter_core/features/home/presentation/widgets/item_search.dart';
@@ -55,39 +56,48 @@ class _SearchScreenState extends BaseShareState<SearchScreen, HomeEvent, HomeSta
             SizedBox(
               height: 32.h,
             ),
-            blocBuilder((c, s) => Expanded(
-                  child: Container(
-                    color: AppColors.colorF9FAFE,
-                    child: Scrollbar(
-                      radius: Radius.circular(
-                        8.r,
-                      ),
-                      thickness: 7.w,
-                      isAlwaysShown: true,
-                      child: ListView.separated(
-                        physics: const BouncingScrollPhysics(),
-                        padding: EdgeInsets.zero,
-                        shrinkWrap: true,
-                        itemBuilder: (context, i) => ItemSearch(
+            blocBuilder(
+              (c, s) => Expanded(
+                child: Container(
+                  color: AppColors.colorF9FAFE,
+                  child: Scrollbar(
+                    radius: Radius.circular(
+                      8.r,
+                    ),
+                    thickness: 7.w,
+                    isAlwaysShown: true,
+                    child: ListView.separated(
+                      physics: const BouncingScrollPhysics(),
+                      padding: EdgeInsets.zero,
+                      shrinkWrap: true,
+                      itemBuilder: (context, i) {
+                        int index = (s.listPeriodic ?? []).indexOf(s.listSearchPeriodic?[i] ?? const PeriodicModel());
+                        return ItemSearch(
                           element: s.listSearchPeriodic?[i],
-                          callBack: () => Navigator.of(context).push(
-                            PageTransition(
-                              type: PageTransitionType.fade,
-                              child: DetailScreen(
-                                periodicModel: s.listSearchPeriodic ?? [],
-                                index: i,
-                              ),
-                            ),
-                          ),
+                          callBack: () {
+                            Navigator.of(context)
+                                .push(
+                                  PageTransition(
+                                    type: PageTransitionType.fade,
+                                    child: DetailScreen(
+                                      periodicModel: s.listSearchPeriodic ?? [],
+                                      index: i,
+                                    ),
+                                  ),
+                                )
+                                .whenComplete(() => bloc.add(const HomeEvent.checkIsSearch()));
+                          },
                           index: i,
                           animation: true,
-                        ),
-                        separatorBuilder: (_, __) => const Divider(),
-                        itemCount: (s.listSearchPeriodic?.length ?? 0),
-                      ),
+                        );
+                      },
+                      separatorBuilder: (_, __) => const Divider(),
+                      itemCount: (s.listSearchPeriodic?.length ?? 0),
                     ),
                   ),
-                ))
+                ),
+              ),
+            )
           ],
         ),
       ),

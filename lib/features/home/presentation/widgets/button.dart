@@ -50,13 +50,17 @@ class ButtonLeftWidget extends StatelessWidget {
               width: 8.w,
             ),
             Expanded(
-              child: Text(
-                '$index. $name',
-                style: AppStyles.subTitle1.copyWith(
-                  fontSize: 12.sp,
-                  fontWeight: FontWeight.w600,
-                  height: 20 / 12,
-                  color: AppColors.color344054,
+              child: SizedBox(
+                width: 100.w,
+                child: Text(
+                  '$index. $name',
+                  overflow: TextOverflow.ellipsis,
+                  style: AppStyles.subTitle1.copyWith(
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w600,
+                    height: 20 / 12,
+                    color: AppColors.color344054,
+                  ),
                 ),
               ),
             )

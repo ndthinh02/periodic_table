@@ -102,6 +102,7 @@ dev_dependencies:
   freezed: ^2.0.3+1
   flutter_lints: ^2.0.0
   injectable_generator: any
+
   # flutter_dotenv: ^5.0.2
 
 flutter_gen:
@@ -133,9 +134,9 @@ flutter:
         - asset: assets/fonts/SVNGilroy-Bold.otf
           weight: 700
 
-flutter_icons:
+flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
   remove_alpha_ios: true
-  image_path: "assets/icon/logo.png"
+  image_path: "assets/icon/logo_app.jpg"
   adaptive_icon_background: null

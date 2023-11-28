@@ -7,6 +7,8 @@ part of 'home_bloc.dart';
 // **************************************************************************
 
 abstract class _$HomeStateCWProxy {
+  HomeState isSearch(bool? isSearch);
+
   HomeState listPeriodic(List<PeriodicModel>? listPeriodic);
 
   HomeState listSearchPeriodic(List<PeriodicModel>? listSearchPeriodic);
@@ -20,6 +22,7 @@ abstract class _$HomeStateCWProxy {
   /// HomeState(...).copyWith(id: 12, name: "My name")
   /// ````
   HomeState call({
+    bool? isSearch,
     List<PeriodicModel>? listPeriodic,
     List<PeriodicModel>? listSearchPeriodic,
     BaseStateStatus? status,
@@ -31,6 +34,9 @@ class _$HomeStateCWProxyImpl implements _$HomeStateCWProxy {
   final HomeState _value;
 
   const _$HomeStateCWProxyImpl(this._value);
+
+  @override
+  HomeState isSearch(bool? isSearch) => this(isSearch: isSearch);
 
   @override
   HomeState listPeriodic(List<PeriodicModel>? listPeriodic) =>
@@ -52,11 +58,16 @@ class _$HomeStateCWProxyImpl implements _$HomeStateCWProxy {
   /// HomeState(...).copyWith(id: 12, name: "My name")
   /// ````
   HomeState call({
+    Object? isSearch = const $CopyWithPlaceholder(),
     Object? listPeriodic = const $CopyWithPlaceholder(),
     Object? listSearchPeriodic = const $CopyWithPlaceholder(),
     Object? status = const $CopyWithPlaceholder(),
   }) {
     return HomeState(
+      isSearch: isSearch == const $CopyWithPlaceholder()
+          ? _value.isSearch
+          // ignore: cast_nullable_to_non_nullable
+          : isSearch as bool?,
       listPeriodic: listPeriodic == const $CopyWithPlaceholder()
           ? _value.listPeriodic
           // ignore: cast_nullable_to_non_nullable

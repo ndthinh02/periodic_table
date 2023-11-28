@@ -195,7 +195,7 @@ class _HomePageState extends BaseShareState<HomePage, HomeEvent, HomeState, Home
               Expanded(
                 child: blocBuilder(
                   (c, s) => s.status == BaseStateStatus.loading
-                      ? const CircularProgressIndicator()
+                      ? const SizedBox.shrink()
                       : SingleChildScrollView(
                           physics: const BouncingScrollPhysics(),
                           child: _numberWidget(elements: s.listPeriodic),

@@ -20,18 +20,21 @@ mixin _$HomeEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function(String? value) search,
+    required TResult Function() checkIsSearch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
     TResult? Function(String? value)? search,
+    TResult? Function()? checkIsSearch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function(String? value)? search,
+    TResult Function()? checkIsSearch,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$HomeEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(Init value) init,
     required TResult Function(Search value) search,
+    required TResult Function(CheckIsSearch value) checkIsSearch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Init value)? init,
     TResult? Function(Search value)? search,
+    TResult? Function(CheckIsSearch value)? checkIsSearch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Init value)? init,
     TResult Function(Search value)? search,
+    TResult Function(CheckIsSearch value)? checkIsSearch,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -112,6 +118,7 @@ class _$InitImpl implements Init {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function(String? value) search,
+    required TResult Function() checkIsSearch,
   }) {
     return init();
   }
@@ -121,6 +128,7 @@ class _$InitImpl implements Init {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
     TResult? Function(String? value)? search,
+    TResult? Function()? checkIsSearch,
   }) {
     return init?.call();
   }
@@ -130,6 +138,7 @@ class _$InitImpl implements Init {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function(String? value)? search,
+    TResult Function()? checkIsSearch,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -143,6 +152,7 @@ class _$InitImpl implements Init {
   TResult map<TResult extends Object?>({
     required TResult Function(Init value) init,
     required TResult Function(Search value) search,
+    required TResult Function(CheckIsSearch value) checkIsSearch,
   }) {
     return init(this);
   }
@@ -152,6 +162,7 @@ class _$InitImpl implements Init {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Init value)? init,
     TResult? Function(Search value)? search,
+    TResult? Function(CheckIsSearch value)? checkIsSearch,
   }) {
     return init?.call(this);
   }
@@ -161,6 +172,7 @@ class _$InitImpl implements Init {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Init value)? init,
     TResult Function(Search value)? search,
+    TResult Function(CheckIsSearch value)? checkIsSearch,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -240,6 +252,7 @@ class _$SearchImpl implements Search {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function(String? value) search,
+    required TResult Function() checkIsSearch,
   }) {
     return search(value);
   }
@@ -249,6 +262,7 @@ class _$SearchImpl implements Search {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
     TResult? Function(String? value)? search,
+    TResult? Function()? checkIsSearch,
   }) {
     return search?.call(value);
   }
@@ -258,6 +272,7 @@ class _$SearchImpl implements Search {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function(String? value)? search,
+    TResult Function()? checkIsSearch,
     required TResult orElse(),
   }) {
     if (search != null) {
@@ -271,6 +286,7 @@ class _$SearchImpl implements Search {
   TResult map<TResult extends Object?>({
     required TResult Function(Init value) init,
     required TResult Function(Search value) search,
+    required TResult Function(CheckIsSearch value) checkIsSearch,
   }) {
     return search(this);
   }
@@ -280,6 +296,7 @@ class _$SearchImpl implements Search {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Init value)? init,
     TResult? Function(Search value)? search,
+    TResult? Function(CheckIsSearch value)? checkIsSearch,
   }) {
     return search?.call(this);
   }
@@ -289,6 +306,7 @@ class _$SearchImpl implements Search {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Init value)? init,
     TResult Function(Search value)? search,
+    TResult Function(CheckIsSearch value)? checkIsSearch,
     required TResult orElse(),
   }) {
     if (search != null) {
@@ -305,4 +323,112 @@ abstract class Search implements HomeEvent {
   @JsonKey(ignore: true)
   _$$SearchImplCopyWith<_$SearchImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CheckIsSearchImplCopyWith<$Res> {
+  factory _$$CheckIsSearchImplCopyWith(
+          _$CheckIsSearchImpl value, $Res Function(_$CheckIsSearchImpl) then) =
+      __$$CheckIsSearchImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CheckIsSearchImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$CheckIsSearchImpl>
+    implements _$$CheckIsSearchImplCopyWith<$Res> {
+  __$$CheckIsSearchImplCopyWithImpl(
+      _$CheckIsSearchImpl _value, $Res Function(_$CheckIsSearchImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CheckIsSearchImpl implements CheckIsSearch {
+  const _$CheckIsSearchImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.checkIsSearch()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$CheckIsSearchImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() init,
+    required TResult Function(String? value) search,
+    required TResult Function() checkIsSearch,
+  }) {
+    return checkIsSearch();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? init,
+    TResult? Function(String? value)? search,
+    TResult? Function()? checkIsSearch,
+  }) {
+    return checkIsSearch?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
+    TResult Function(String? value)? search,
+    TResult Function()? checkIsSearch,
+    required TResult orElse(),
+  }) {
+    if (checkIsSearch != null) {
+      return checkIsSearch();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Init value) init,
+    required TResult Function(Search value) search,
+    required TResult Function(CheckIsSearch value) checkIsSearch,
+  }) {
+    return checkIsSearch(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Init value)? init,
+    TResult? Function(Search value)? search,
+    TResult? Function(CheckIsSearch value)? checkIsSearch,
+  }) {
+    return checkIsSearch?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Init value)? init,
+    TResult Function(Search value)? search,
+    TResult Function(CheckIsSearch value)? checkIsSearch,
+    required TResult orElse(),
+  }) {
+    if (checkIsSearch != null) {
+      return checkIsSearch(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CheckIsSearch implements HomeEvent {
+  const factory CheckIsSearch() = _$CheckIsSearchImpl;
 }

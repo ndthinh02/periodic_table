@@ -25,6 +25,7 @@ class HomeBloc extends BaseBloc<HomeEvent, HomeState> with BaseCommonMethodMixin
         search: (String? value) {
           _onSearch(value, emit);
         },
+        checkIsSearch: () => _onCheckIsSearch(emit),
       );
     });
   }
@@ -58,7 +59,12 @@ class HomeBloc extends BaseBloc<HomeEvent, HomeState> with BaseCommonMethodMixin
     emit(
       state.copyWith(
         listSearchPeriodic: listSearch,
+        isSearch: false,
       ),
     );
+  }
+
+  _onCheckIsSearch(Emitter emit) {
+    emit(state.copyWith(isSearch: true));
   }
 }
